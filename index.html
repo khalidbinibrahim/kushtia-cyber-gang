@@ -5,150 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kushtia Cyber Gang - Hacked 2025</title>
+    <link rel="stylesheet" href="style.css">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <style>
-        /* Slow Spin Animation */
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        /* Logo Spin Effect */
-        .animate-spin-slow {
-            animation: spin 12s linear infinite;
-        }
-
-        /* Hacking Text Animation */
-        @keyframes typing {
-            from {
-                width: 0;
-            }
-
-            to {
-                width: 100%;
-            }
-        }
-
-        @keyframes blink {
-
-            from,
-            to {
-                border-color: transparent;
-            }
-
-            50% {
-                border-color: #00ff00;
-            }
-        }
-
-        .hacking-effect {
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 2px solid #00ff00;
-            animation: typing 4s steps(30, end), blink 0.5s step-end infinite;
-        }
-
-        /* Glitch Animation */
-        @keyframes glitch {
-            0% {
-                text-shadow: 2px 2px #ff0000, -2px -2px #00ff00;
-            }
-
-            50% {
-                text-shadow: -2px -2px #ff0000, 2px 2px #00ff00;
-            }
-
-            100% {
-                text-shadow: 2px -2px #ff0000, -2px 2px #00ff00;
-            }
-        }
-
-        /* Adjusted Glow Effect */
-        .glow {
-            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00;
-        }
-
-        /* Glowing Border */
-        .border-glow {
-            box-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00, 0 0 45px #00ff00;
-        }
-
-        /* Border Animation */
-        .animate-spin-border {
-            animation: spin 6s linear infinite;
-        }
-
-
-        /* Glitch Text Effect */
-        .glitch {
-            animation: glitch 2s infinite;
-        }
-
-        /* Background Canvas */
-        canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.5;
-        }
-
-        /* Glow Effect */
-        .glow {
-            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00;
-        }
-
-        /* Telegram Button Effect */
-        .neon-button {
-            background-color: transparent;
-            border: 2px solid #00ff00;
-            color: #00ff00;
-            padding: 10px 20px;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 30px;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .neon-button:hover {
-            box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
-            background-color: #00ff00;
-            color: #000;
-        }
-    </style>
 </head>
 
 <body class="bg-black text-green-500 font-mono relative overflow-hidden">
     <canvas id="bg"></canvas>
 
-    <!-- Spinning Logo with Styled Border -->
-    <div class="relative flex items-center justify-center mt-20">
-        <!-- Glowing Outer Border -->
-        <div
-            class="absolute w-40 h-40 border-[4px] border-double border-green-500 rounded-full animate-spin-border border-glow">
-        </div>
-        <!-- Logo -->
-        <img src="/images/logo.png" alt="Kushtia Cyber Gang Logo" class="w-52 h-52 rounded-full animate-spin-slow" />
+    <!-- Bismillah Section -->
+    <div class="text-center mt-10">
+        <h1 class="text-2xl md:text-4xl font-bold glow">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</h1>
     </div>
 
+    <!-- Spinning Logo with Styled Border -->
+    <div class="relative flex items-center justify-center mt-10">
+        <!-- Glowing Outer Border -->
 
+        <!-- <div
+            class="absolute w-40 h-40 border-[4px] border-double border-green-500 rounded-full animate-spin-border border-glow">
+        </div> -->
 
+        <!-- Logo -->
+        <img src="/images/logo.png" alt="Kushtia Cyber Gang Logo"
+            class="w-32 h-32 md:w-52 md:h-52 rounded-full animate-horizontal-rotation" />
+    </div>
 
     <!-- Title -->
-    <h1 class="mt-12 text-6xl font-extrabold uppercase text-center glow hacking-effect">
+    <h1 class="mt-10 text-3xl md:text-6xl font-extrabold uppercase text-center glow hacking-effect">
         Kushtia Cyber Gang
     </h1>
 
     <!-- Glitch Text -->
-    <p class="mt-6 text-2xl text-center glitch">
+    <p class="mt-6 text-xl md:text-2xl text-center glitch">
         "You Have Been Owned - Kushtia Cyber Gang"
     </p>
 
@@ -161,8 +51,8 @@
     </div>
 
     <!-- Footer -->
-    <div class="bottom-4 w-full text-center mt-12">
-        <p class="text-sm italic glow">
+    <div class="bottom-4 w-full text-center mt-10">
+        <p class="text-xs md:text-sm italic glow">
             All Rights Reserved © Kushtia Cyber Gang 2025
         </p>
     </div>
@@ -172,37 +62,7 @@
         allow="autoplay"></iframe>
 
     <!-- Three.js Hacking Background -->
-    <script>
-        const canvas = document.getElementById('bg');
-        const renderer = new THREE.WebGLRenderer({ canvas });
-        renderer.setPixelRatio(window.devicePixelRatio);
-        renderer.setSize(window.innerWidth, window.innerHeight);
-
-        const scene = new THREE.Scene();
-
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        camera.position.z = 5;
-
-        const geometry = new THREE.TorusKnotGeometry(10, 3, 200, 16);
-        const material = new THREE.MeshStandardMaterial({ color: 0x00ff00, wireframe: true });
-        const torusKnot = new THREE.Mesh(geometry, material);
-        scene.add(torusKnot);
-
-        const pointLight = new THREE.PointLight(0x00ff00);
-        pointLight.position.set(10, 10, 10);
-        scene.add(pointLight);
-
-        function animate() {
-            requestAnimationFrame(animate);
-
-            torusKnot.rotation.x += 0.01;
-            torusKnot.rotation.y += 0.01;
-
-            renderer.render(scene, camera);
-        }
-
-        animate();
-    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
