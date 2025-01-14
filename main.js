@@ -1,4 +1,4 @@
-/* Three.js Hacking Background */
+/*** Three.js Hacking Background ***/
 
 const canvas = document.getElementById('bg');
 const renderer = new THREE.WebGLRenderer({ canvas });
@@ -29,3 +29,18 @@ function animate() {
 }
 
 animate();
+
+/*** JavaScript Fallback ***/
+
+const audio = document.getElementById('background-music');
+const overlay = document.getElementById('overlay');
+const startButton = document.getElementById('start-button');
+
+startButton.addEventListener('click', () => {
+    audio.play().then(() => {
+        overlay.style.display = 'none'; // Remove overlay
+        console.log("Audio started");
+    }).catch(error => {
+        console.warn("Error starting audio:", error);
+    });
+});
